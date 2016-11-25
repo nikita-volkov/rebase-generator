@@ -216,6 +216,20 @@ modules =
     forw "Data.Text.Read",
     forw "Data.Text.Unsafe",
 
+    -- time, 1.4
+    forw "Data.Time",
+    forw "Data.Time.Calendar",
+    forw "Data.Time.Calendar.Easter",
+    forw "Data.Time.Calendar.Julian",
+    forw "Data.Time.Calendar.MonthDay",
+    forw "Data.Time.Calendar.OrdinalDate",
+    forw "Data.Time.Calendar.WeekDate",
+    forw "Data.Time.Clock",
+    forw "Data.Time.Clock.POSIX",
+    forw "Data.Time.Clock.TAI",
+    forw "Data.Time.Format",
+    forw "Data.Time.LocalTime",
+
     -- bifunctors, 5
     forw "Data.Biapplicative",
     forw "Data.Bifoldable",
@@ -322,8 +336,18 @@ modules =
     forw "Data.Either.Combinators",
     forw "Data.Either.Validation",
 
+    -- stm, 2.4.4
+    forw "Control.Concurrent.STM",
+    forw "Control.Concurrent.STM.TArray",
+    forw "Control.Concurrent.STM.TBQueue",
+    forw "Control.Concurrent.STM.TChan",
+    forw "Control.Concurrent.STM.TMVar",
+    forw "Control.Concurrent.STM.TQueue",
+    forw "Control.Concurrent.STM.TSem",
+    forw "Control.Concurrent.STM.TVar",
+    forw "Control.Monad.STM",
+
     -- other
-    forw "Data.Time",
     forw "Data.Scientific",
     forw "Data.UUID",
     forw "Data.DList",
@@ -331,8 +355,7 @@ modules =
     forw "Data.Void.Unsafe",
     forw "Contravariant.Extras",
     forw "Control.DeepSeq",
-    forw "Control.Monad.Fail",
-    forw "Control.Concurrent.STM"
+    forw "Control.Monad.Fail"
   ]
   where
     forw =
