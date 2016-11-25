@@ -307,7 +307,7 @@ cabal moduleNames =
     name:
       rebase
     version:
-      1.0.5
+      1.0.6
     synopsis:
       A more progressive alternative to the "base" package
     description:
@@ -391,7 +391,7 @@ cabal moduleNames =
         fail >= 4.9 && < 5,
         -- general:
         base-prelude >= 0.1 && < 2,
-        base >= 4.6 && < 5
+        base >= 4.7 && < 5
 
   |]
   where
