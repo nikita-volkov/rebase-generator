@@ -18,6 +18,7 @@ generate =
     B.removeDirectoryRecursive "library"
     forM_ modules (uncurry overwriteModule)
     D.writeFile "rebase.cabal" (A.cabal (map fst modules))
+    D.writeFile "README.md" A.readme
 
 overwriteModule :: ModuleName -> ModuleContents -> IO ()
 overwriteModule (ModuleName moduleNameText) (ModuleContents moduleContentsText) =
