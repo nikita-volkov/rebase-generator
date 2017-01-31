@@ -307,7 +307,7 @@ cabal moduleNames =
     name:
       rebase
     version:
-      1.0.7
+      1.0.8
     synopsis:
       A more progressive alternative to the "base" package
     description:
@@ -367,7 +367,7 @@ cabal moduleNames =
         stm >= 2 && < 3,
         -- data:
         hashable >= 1 && < 2,
-        vector >= 0.10 && < 0.12,
+        vector >= 0.10 && < 0.13,
         containers >= 0.5 && < 0.6,
         unordered-containers >= 0.2 && < 0.3,
         bytestring >= 0.10 && < 0.11,
