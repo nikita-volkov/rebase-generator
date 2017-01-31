@@ -348,8 +348,12 @@ modules =
     forw "Control.Concurrent.STM.TVar",
     forw "Control.Monad.STM",
 
-    -- other
+    -- scientific, 0.3.4
     forw "Data.Scientific",
+    forw "Data.ByteString.Builder.Scientific",
+    forw "Data.Text.Lazy.Builder.Scientific",
+
+    -- other
     forw "Data.UUID",
     forw "Data.DList",
     forw "Data.Void",

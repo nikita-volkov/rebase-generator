@@ -307,7 +307,7 @@ cabal moduleNames =
     name:
       rebase
     version:
-      1.0.6
+      1.0.7
     synopsis:
       A more progressive alternative to the "base" package
     description:
