@@ -1,10 +1,10 @@
 module Rebase.Generator.Templates
 where
 
-import Rebase.Prelude
+import Rebase.Generator.Prelude
 import NeatInterpolation
 import Rebase.Generator.Model
-import qualified Rebase.Data.Text as A
+import qualified Data.Text as A
 
 
 forwardingModule :: ModuleName -> Text
@@ -60,6 +60,50 @@ dataListModule =
     type List =
       []
 
+  |]
+
+dataEitherModule :: Text
+dataEitherModule =
+  [text|
+    module Rebase.Data.List
+    (
+      module Data.Either,
+      fromLeft,
+      fromRight,
+    )
+    where
+
+    import Data.Either hiding (fromLeft, fromRight)
+
+    -- | Extract the left value or a default.
+    --
+    -- @
+    -- 'fromLeft' b ≡ 'either' 'id' ('const' b)
+    -- @
+    --
+    -- >>> fromLeft "hello" (Right 42)
+    -- "hello"
+    --
+    -- >>> fromLeft "hello" (Left "world")
+    -- "world"
+    fromLeft :: a -> Either a b -> a
+    fromLeft _ (Left x) = x
+    fromLeft x _ = x
+
+    -- | Extract the right value or a default.
+    --
+    -- @
+    -- 'fromRight' b ≡ 'either' ('const' b) 'id'
+    -- @
+    --
+    -- >>> fromRight "hello" (Right "world")
+    -- "world"
+    --
+    -- >>> fromRight "hello" (Left 42)
+    -- "hello"
+    fromRight :: b -> Either a b -> b
+    fromRight _ (Right x) = x
+    fromRight x _ = x
   |]
 
 dataBifunctorModule :: Text
@@ -234,7 +278,7 @@ preludeModule =
     -- either
     -------------------------
     import Rebase.Control.Monad.Trans.Either as Exports hiding (left, right)
-    import Rebase.Data.Either.Combinators as Exports hiding (isLeft, isRight, mapLeft, mapRight)
+    import Rebase.Data.Either.Combinators as Exports hiding (isLeft, isRight, mapLeft, mapRight, fromLeft, fromRight)
     import Rebase.Data.Either.Validation as Exports
 
     -- fail
@@ -301,13 +345,13 @@ preludeModule =
 
   |]
 
-cabal :: List ModuleName -> Text
+cabal :: [ModuleName] -> Text
 cabal moduleNames =
   [text|
     name:
       rebase
     version:
-      1.0.8
+      1.1
     synopsis:
       A more progressive alternative to the "base" package
     description:

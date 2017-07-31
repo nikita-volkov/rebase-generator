@@ -93,7 +93,6 @@ modules =
     forw "Data.Type.Coercion",
     forw "Data.Type.Equality",
     forw "Data.Typeable",
-    forw "Data.Typeable.Internal",
     forw "Data.Unique",
     forw "Data.Version",
     forw "Data.Word",
