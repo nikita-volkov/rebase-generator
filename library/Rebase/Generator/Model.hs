@@ -1,7 +1,7 @@
 module Rebase.Generator.Model
 where
 
-import Rebase.Prelude
+import Rebase.Generator.Prelude
 
 
 newtype ModuleName =

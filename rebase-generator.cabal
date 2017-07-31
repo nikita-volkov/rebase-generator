@@ -40,11 +40,14 @@ library
     Rebase.Generator
   other-modules:
     Rebase.Generator.Templates
+    Rebase.Generator.Model
+    Rebase.Generator.Prelude
   build-depends:
     directory == 1.*,
     filepath == 1.*,
     neat-interpolation == 0.3.*,
-    rebase == 1.*
+    text == 1.*,
+    base-prelude == 1.*
 
 executable rebase-generator
   hs-source-dirs:
@@ -57,4 +60,4 @@ executable rebase-generator
     Haskell2010
   build-depends:
     rebase-generator,
-    rebase
+    base-prelude

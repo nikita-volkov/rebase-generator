@@ -4,12 +4,13 @@ module Rebase.Generator
 )
 where
 
-import Rebase.Prelude
+import Rebase.Generator.Prelude
 import Rebase.Generator.Model
 import qualified Rebase.Generator.Templates as A
 import qualified System.Directory as B
 import qualified System.FilePath as C
-import qualified Rebase.Data.Text as D
+import qualified Data.Text as D
+import qualified Data.Text.IO as D
 
 
 generate :: IO ()
@@ -35,7 +36,7 @@ overwriteModule (ModuleName moduleNameText) (ModuleContents moduleContentsText) 
       flip mappend ".hs" &
       D.unpack
 
-modules :: List Module
+modules :: [Module]
 modules =
   [
     -- custom
