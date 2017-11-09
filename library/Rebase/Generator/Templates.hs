@@ -222,6 +222,8 @@ preludeModule =
     -- profunctors
     -------------------------
     import Rebase.Data.Profunctor.Unsafe as Exports
+    import Rebase.Data.Profunctor.Choice as Exports
+    import Rebase.Data.Profunctor.Strong as Exports
 
     -- contravariant
     -------------------------
@@ -351,7 +353,7 @@ cabal moduleNames =
     name:
       rebase
     version:
-      1.1
+      1.1.1
     synopsis:
       A more progressive alternative to the "base" package
     description:

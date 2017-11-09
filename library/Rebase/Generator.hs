@@ -253,6 +253,8 @@ modules =
     -- profunctors
     forw "Data.Profunctor",
     forw "Data.Profunctor.Unsafe",
+    forw "Data.Profunctor.Strong",
+    forw "Data.Profunctor.Choice",
 
     -- semigroups, 0.16
     cust "Data.Semigroup" A.dataSemigroupModule,
