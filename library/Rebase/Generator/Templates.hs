@@ -279,7 +279,6 @@ preludeModule =
 
     -- either
     -------------------------
-    import Rebase.Control.Monad.Trans.Either as Exports hiding (left, right)
     import Rebase.Data.Either.Combinators as Exports hiding (isLeft, isRight, mapLeft, mapRight, fromLeft, fromRight)
     import Rebase.Data.Either.Validation as Exports
 
@@ -433,7 +432,7 @@ cabal moduleNames =
         deepseq >= 1.4 && < 2,
         transformers >= 0.4 && < 0.6,
         mtl >= 2.2 && < 3.0,
-        either >= 4.4 && < 5,
+        either >= 5 && < 6,
         fail >= 4.9 && < 5,
         -- general:
         base-prelude >= 0.1 && < 2,

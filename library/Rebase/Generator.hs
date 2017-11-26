@@ -334,8 +334,7 @@ modules =
     forw "Control.Monad.Writer.Lazy",
     forw "Control.Monad.Writer.Strict",
 
-    -- either, 4.4
-    forw "Control.Monad.Trans.Either",
+    -- either, 5
     forw "Data.Either.Combinators",
     forw "Data.Either.Validation",
 
