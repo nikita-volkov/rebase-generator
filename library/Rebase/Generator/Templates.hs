@@ -215,8 +215,9 @@ preludeModule =
 
     -- base
     -------------------------
-    import Rebase.Data.Functor.Identity as Exports
     import Rebase.Data.Bifunctor as Exports
+    import Rebase.Data.Functor.Compose as Exports
+    import Rebase.Data.Functor.Identity as Exports
     import Rebase.Data.List as Exports (List)
 
     -- profunctors
@@ -352,7 +353,7 @@ cabal moduleNames =
     name:
       rebase
     version:
-      1.2
+      1.2.1
     synopsis:
       A more progressive alternative to the "base" package
     description:

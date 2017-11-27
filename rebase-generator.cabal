@@ -1,7 +1,7 @@
 name:
   rebase-generator
 version:
-  1.2
+  1.2.1
 synopsis:
   A utility for the generation of the "rebase" project
 homepage:
